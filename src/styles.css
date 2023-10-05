@@ -1,10 +1,12 @@
-.footer{
-    background-color: #78d649;
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.container-footer{
+    background-color: #85d35e;
     padding: 15px 10px;
     text-align: center;
     color: #fff;
 }
-.footer small{
+.container-footer small{
     font-size: 15px;
 }
 
@@ -38,7 +40,7 @@ html,body {
   .form-signin input[type="password"] {
     margin-bottom: 10px;
     border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-top-right-radius: 0;
   }
 
 /* .container-footer {
