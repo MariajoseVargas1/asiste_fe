@@ -1,13 +1,26 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
-.container-footer{
+.container-fluid{
     background-color: #85d35e;
-    padding: 15px 10px;
     text-align: center;
     color: #fff;
 }
-.container-footer small{
+.nav-link{
+  margin-left: 80px;
+}
+.bi-person{
+  margin-left: 80px;
+}
+.dropdown-item{
+  color: #fff;
+}
+.container-fluid small{
     font-size: 15px;
+}
+
+.footer{
+  background-color: #85d35e;
+  text-align: center;
 }
 
 html,body {
