@@ -5,12 +5,11 @@
     text-align: center;
     color: #fff;
 }
-.nav-link{
+
+.nav-link, .bi-person{
   margin-left: 80px;
 }
-.bi-person{
-  margin-left: 80px;
-}
+
 .dropdown-item{
   color: #fff;
 }
