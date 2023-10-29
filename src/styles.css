@@ -16,7 +16,7 @@
 .footer{
   background-color: #41A72A;
 }
-/*ESTILOS DEL FORMULARIO DE LOGIN*/
+/*ESTILOS DEL FORMULARIO DE LOGIN Y FORMULARIO DE OLVIDO DE CONTRASEÑA*/
 
 .card{
   margin-top: 60px;
@@ -24,7 +24,7 @@
   margin-left: 100px;
 }
 .btn{
-  margin-left: 200px;
+  margin-left: 210px;
   /*mirar color de boton margin-left: 50px;
   margin-right: 100px; */
 }
@@ -40,4 +40,4 @@
     transform: scale(1.1); 
 }
 
-/*ESTILOS DE */
+/*ESTILOS DE  */

@@ -1,1 +1,52 @@
-<p>forgot works!</p>
+<div class="card-form-forgot">
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="image_firts">
+              <img
+                src="./assets/img/_logo_asiste_horizontal.png"
+                alt="logo_asiste_horizontal"
+                width="150"
+                height="50"
+              />
+            </div>
+            <br><!--CAMBIAR-->
+            <h5 class="card-title text-center mb-4">Olvidé mi contraseña</h5>
+  
+            <form>
+              <div class="form-floating">
+              <label for="floatingInput"><i class="bi bi-file-post-fill"></i>Tipo de documento</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected></option>
+                    <option value="1">T.I - Tarjeta de identidad</option>
+                    <option value="2">C.C - Cédula de Ciudadanía</option>
+                    <option value="3">C.E - Cédula de Extranjería</option>
+                    <option value="4">Pasaporte</option>
+                  </select>
+              </div>
+              <br><!--CAMBIAR-->
+              <div class="form-floating">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="numerdocument"
+                  pattern="^[0-9]{1,10}$"
+                  placeholder="document"
+                  required/>
+                  <br><!--mirar lo del pattern-->
+                  
+                <label for="floatingPassword"><i class="bi bi-file-person"></i>Número de documento</label>
+              </div>
+  
+              <button type="submit" class="btn btn-primary rounded">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="imagen-forgot">
+  <img src="/assets/img/absurd.design - Chapter 1 - 04.png" alt="Imagen-form-login" width="430" height="200" class="img-fluid" />
+</div>
