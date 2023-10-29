@@ -1,5 +1,43 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
-
-.nav{
-  background-color: aqua;
+/*ESTILOS PARA EL NAVBAR*/
+.navbar-expand-md{
+  margin-top: 10px;
+  margin-left: 10px;
 }
+
+.nav-link{
+    margin-right: 61px;
+    margin-left: 61px;
+    text-decoration: none; 
+    /* 
+    color:black; */
+}
+/*ESTILOS DEL FOOTER*/
+.footer{
+  background-color: #41A72A;
+}
+/*ESTILOS DEL FORMULARIO DE LOGIN*/
+
+.card{
+  margin-top: 60px;
+  margin-right: 70px;
+  margin-left: 100px;
+}
+.btn{
+  margin-left: 200px;
+  /*mirar color de boton margin-left: 50px;
+  margin-right: 100px; */
+}
+.img-fluid{
+  margin-left: 550px;
+  margin-top: -430px;
+  opacity: 90%;
+  transition: all 0.3s ease;
+  
+}
+.img-fluid{
+    filter: grayscale(100%); /* Convierte la imagen a escala de grises */
+    transform: scale(1.1); 
+}
+
+/*ESTILOS DE */

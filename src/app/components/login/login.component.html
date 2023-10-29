@@ -1,32 +1,50 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="image_firts">
+            <img
+              src="./assets/img/_logo_asiste_horizontal.png"
+              alt="logo_asiste_horizontal"
+              width="150"
+              height="50"
+            />
+          </div>
+          <br><!--CAMBIAR-->
+          <h5 class="card-title text-center mb-4">Ingreso de usuarios registrados</h5>
 
+          <form>
+            <div class="form-floating">
+              <input
+                type="number"
+                class="form-control"
+                id="floatingInput"
+                pattern="^[0-9]{10}$"
+                placeholder=""
+                required
+              /><!--mirar lo del pattern y lo del numbre que sale eso para subir y bajar-->
+              <label for="floatingInput"><i class="bi bi-file-person"></i>Número de documento</label>
+            </div>
+            <br><!--CAMBIAR-->
+            <div class="form-floating">
+              <input
+                type="password"
+                class="form-control"
+                id="contrasena"
+                pattern="^[0-9]{1,10}$"
+                placeholder="Password"
+                required/>
+                <br><!--mirar lo del pattern-->
+                <a href="olvido_contrasena">¿Olvidó su contraseña?</a>
+              <label for="floatingPassword"><i class="bi bi-shield-lock-fill"></i>Contraseña</label>
+            </div>
 
-
-
-
-
-
-
-
-<!-- <main class="form-signin w-100 m-auto">
-    <form>
-      <div class="image_firts"><img src="./assets/img/_logo_asiste_horizontal.png" alt="logo_asiste_horizontal" width="260" height="75"></div>
-      <h1 class="h3 mb-3 fw-normal">Ingreso de usuarios registrados</h1>
-  
-      <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Número de documento</label>
+            <button type="submit" class="btn btn-primary rounded">Enviar</button>
+          </form>
+        </div>
       </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Contraseña</label>
-      </div>
-  
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="recordarme"> Recordarme
-        </label>
-      </div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-     
-    </form>
-  </main> -->
+    </div>
+  </div>
+</div>
+<img src="/assets/img/absurd.design - Chapter 1 - 07.png" alt="Imagen-form-login" width="430" height="200" class="img-fluid " />
