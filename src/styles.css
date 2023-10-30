@@ -48,4 +48,12 @@
   background-image: url('./assets/img/volver-la-escuela-patrón-transparente-de-vector-blanco-y-negro-documento-digital-esquema-educativo-fondo-iconos-clase-línea-223839269.webp') ;
  }
 
-/*ESTILOS DE */
+/*ESTILOS DE LA DATA-COORDINACION*/
+
+/* .container-data{
+  background-image: url('./assets/img/volver-la-escuela-patrón-transparente-de-vector-blanco-y-negro-documento-digital-esquema-educativo-fondo-iconos-clase-línea-223839269.webp') ;
+  margin-top: 50px;
+}esto necesito la imagen global y mas transparente */
+.container-data{
+  margin-top: 100px;
+}
