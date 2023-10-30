@@ -1,47 +1,209 @@
 <div class="d-flex justify-content-center align-items-center vh-100">
-    <div class="card p-4">
-      <form>
-        <div *ngIf="parte1Visible">
-          <!-- Campos de la primera parte del formulario -->
-          <!-- Ejemplo de campo de radio -->
-          <div class="mb-3">
-            <label class="form-label">Opción de radio</label>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="opcionRadio" id="opcion1" value="opcion1">
-              <label class="form-check-label" for="opcion1">Opción 1</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="opcionRadio" id="opcion2" value="opcion2">
-              <label class="form-check-label" for="opcion2">Opción 2</label>
-            </div>
-          </div>
-
-          <!-- Ejemplo de lista desplegable -->
-          <div class="mb-3">
-            <label class="form-label">Lista desplegable</label>
-            <select class="form-select">
-              <option value="opcion1">Opción 1</option>
-              <option value="opcion2">Opción 2</option>
-              <option value="opcion3">Opción 3</option>
-            </select>
-          </div>
-
-          <!-- Otros campos -->
-          <!-- Campos adicionales aquí -->
-
-          <!-- Botón de Siguiente -->
-          <button class="btn btn-primary" (click)="mostrarParte2()">Siguiente</button>
+  <div class="card-grande">
+  <div class="card p-4">
+    <form>
+      <div *ngIf="parte1Visible">
+        <!-- Primera vista-->
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombre"
+            placeholder="Ingrese su nombre"
+            required
+          />
         </div>
 
-        <div *ngIf="!parte1Visible && parte2Visible">
-          <!-- Campos de la segunda parte del formulario -->
-          <!-- Campos adicionales aquí -->
-
-          <!-- Botón de enviar -->
-          <button class="btn btn-success" type="submit">Enviar</button>
+        <div class="mb-3">
+          <label for="apellidos" class="form-label">Apellidos</label>
+          <input
+            type="text"
+            class="form-control"
+            id="apellidos"
+            placeholder="Ingrese sus apellidos"
+            required
+          />
         </div>
-      </form>
-    </div>
+
+        <div class="mb-3">
+          <label class="form-label">Tipo de documento: </label>
+          <div class="form-check ">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="opcionRadio"
+              id="opcion1"
+              value="opcion1"
+              required
+            />
+            <label class="form-check-label" for="opcion1">T.I</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="opcionRadio"
+              id="opcion2"
+              value="opcion2"
+            />
+            <label class="form-check-label" for="opcion2">C.C</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="opcionRadio"
+              id="opcion2"
+              value="opcion2"
+            />
+            <label class="form-check-label" for="opcion2">C.E</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="opcionRadio"
+              id="opcion2"
+              value="opcion2"
+            />
+            <label class="form-check-label" for="opcion2">PASAPORTE</label>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="ficha" class="form-label">Ficha</label>
+          <input
+            type="number"
+            class="form-control"
+            id="ficha"
+            placeholder="Ingrese su número de ficha"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="programa">Programa de formación</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Seleccione su programa de formación</option>
+            <option value="1">ADSO</option>
+            <option value="2">ADSI</option>
+            <option value="3">DVEI</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary" (click)="mostrarParte2()">
+          Siguiente
+        </button>
+      </div>
+
+      <div *ngIf="!parte1Visible && parte2Visible">
+
+        <!-- Segunda vista -->
+        <div class="mb-3">
+          <label class="form-label">Jornada </label>
+          <div class="form-check ">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="opcionRadio"
+              id="opcion1"
+              value="opcion1"
+              required
+            />
+            <label class="form-check-label" for="opcion1">Diurna</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="opcionRadio"
+              id="opcion2"
+              value="opcion2"
+            />
+            <label class="form-check-label" for="opcion2">Tarde</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="opcionRadio"
+              id="opcion2"
+              value="opcion2"
+            />
+            <label class="form-check-label" for="opcion2">Nocturna</label>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Nivel de formación</label>
+          <div class="form-check  ">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="opcionRadio"
+              id="opcion1"
+              value="opcion1"
+              required
+            />
+            <label class="form-check-label form-check-inline" for="opcion1">Técnico</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="opcionRadio"
+              id="opcion2"
+              value="opcion2"
+            />
+            <label class="form-check-label" for="opcion2">Tecnólogo</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="opcionRadio"
+              id="opcion2"
+              value="opcion2"
+            />
+            <label class="form-check-label" for="opcion2">Auxiliar</label>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="celular" class="form-label">Teléfono/Celular</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="celular"
+            placeholder="123-456-7890"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="micorreo@dominio.com"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="email-i" class="form-label">Correo instructor líder</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email-i"
+            placeholder="instructorcorreo@dominio.com"
+          />
+        </div>
+
+        <button class="btn btn-success" type="submit">Enviar</button>
+      </div>
+    </form>
   </div>
+</div>
+</div>
+<div class="fondo"></div>
 
-  <!-- ver si tambien lo pongo para la validacion de novedades -->
+<!-- <textarea class="form-control" id="comentarios" rows="4" placeholder="Ingrese sus comentarios aquí" required></textarea>
+FALTO EL TEXT AREA-->
