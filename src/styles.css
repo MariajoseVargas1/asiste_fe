@@ -7,8 +7,8 @@
 }
 
 .nav-link{
-    margin-right: 61px;
-    margin-left: 61px;
+    margin-right: 65px;
+    margin-left: 65px;
     text-decoration: none; 
     /* 
     color:black; */
@@ -56,4 +56,9 @@
 }esto necesito la imagen global y mas transparente */
 .container-data{
   margin-top: 100px;
+}
+
+/*ESTILOS DE LA DATA-COORDINACION*/
+.container .px-4{
+  margin-top: 70px;
 }
