@@ -5,5 +5,12 @@ import { Component } from '@angular/core';
   templateUrl: './perfil-aprendiz.component.html'
 })
 export class PerfilAprendizComponent {
+  parte1Visible = true;
+  parte2Visible = false;
+
+  mostrarParte2() {
+    this.parte1Visible = false;
+    this.parte2Visible = true;
+  }
 
 }
