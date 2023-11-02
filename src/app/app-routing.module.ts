@@ -14,7 +14,8 @@ const routes: Routes = [
   {path: 'regis-novedad', component: RegistroNovedadComponent},
   {path: 'preguntas-frecuentes', component: PreguntasFrecuentesComponent},
   {path: 'perfil-aprendiz', component: PerfilAprendizComponent},
-  
+
+
 ];
 
 @NgModule({
