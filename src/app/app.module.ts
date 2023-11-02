@@ -18,7 +18,7 @@ import { PerfilAprendizComponent } from './components/perfil-aprendiz/perfil-apr
 import { PerfilInstructorComponent } from './components/perfil-instructor/perfil-instructor.component';
 import { InicioInstructorComponent } from './components/inicio-instructor/inicio-instructor.component';
 import { DataCoordinacionComponent } from './components/data-coordinacion/data-coordinacion.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +41,8 @@ import { DataCoordinacionComponent } from './components/data-coordinacion/data-c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

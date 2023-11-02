@@ -1,0 +1,6 @@
+<p>login works!</p>
+<form [formGroup]="form">
+<input formControlName="document" type="number">
+<input formControlName="password" type="text">
+<button (click)="onClick()" [disabled]="!form.valid">Enviar</button>
+</form>

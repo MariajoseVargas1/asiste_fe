@@ -5,5 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
-
 }
+
+// getHeader():void{
+//   this.navbarService.getHeader()
+//   .suscribe(header=>this.navbar = navbar.slice(1, 5));
+// }
+
