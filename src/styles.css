@@ -1,5 +1,12 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
+/* IMAGEN GLOGAL DE FONDO 
+body{
+  background-image: url('./assets/img/global-fondo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}*/
 /*ESTILOS PARA EL NAVBAR*/
 .navbar-expand-md{
   margin-top: 10px;
@@ -44,9 +51,9 @@
 /*ESTILOS DE  REGISTRO DE NOVEDAD*/
 
 
-.fondo{
+/* .fondo{
   background-image: url('./assets/img/volver-la-escuela-patrón-transparente-de-vector-blanco-y-negro-documento-digital-esquema-educativo-fondo-iconos-clase-línea-223839269.webp') ;
- }
+ } */
 
 /*ESTILOS DE LA DATA-COORDINACION E INICIO INSTRUCTOR*/
 .container .px-4{
@@ -59,3 +66,7 @@
   margin-left: 8px;
 }
 
+/* 
+.container-fluid{
+  background-image: "./global-fondo";
+} */

@@ -36,11 +36,12 @@
                 placeholder="Password"
                 required/>
                 <br><!--mirar lo del pattern-->
-                <a href="olvido_contrasena">¿Olvidó su contraseña?</a>
-              <label for="floatingPassword"><i class="bi bi-shield-lock-fill"></i>Contraseña</label>
+                <a routerLink="/forgot">¿Olvidó su contraseña?</a>
+              <label for="floatingPassword" type="text"><i class="bi bi-shield-lock-fill"></i>Contraseña</label>
             </div>
 
-            <button type="submit" class="btn btn-primary rounded">Enviar</button>
+            <button type="submit" class="btn btn-primary rounded" (click)="onBotonClick()">
+              Enviar</button>
           </form>
         </div>
       </div>
