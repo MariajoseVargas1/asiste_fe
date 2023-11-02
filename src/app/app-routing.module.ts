@@ -6,20 +6,25 @@ import { PreguntasFrecuentesComponent } from './components/preguntas-frecuentes/
 import { GridAprendizComponent } from './components/grid-aprendiz/grid-aprendiz.component';
 import { HorariosComponent } from './components/horarios/horarios.component';
 import { PerfilAprendizComponent } from './components/perfil-aprendiz/perfil-aprendiz.component';
+import { LoginComponent } from './pruebas/comp/login/login.component';
+import { GridInstructorComponent } from './components/grid-instructor/grid-instructor.component';
+import { DataCoordinacionComponent } from './components/data-coordinacion/data-coordinacion.component';
 // imports: [ RouterModule.forRoot(routes) ]
 const routes: Routes = [
-  {path: 'navbar', component: HeaderComponent},
-  {path: 'inicio', component: GridAprendizComponent},
-  {path: 'horarios', component: HorariosComponent},
-  {path: 'regis-novedad', component: RegistroNovedadComponent},
-  {path: 'preguntas-frecuentes', component: PreguntasFrecuentesComponent},
-  {path: 'perfil-aprendiz', component: PerfilAprendizComponent},
-
-
+  { path: 'navbar', component: HeaderComponent },
+  { path: 'inicio', component: GridAprendizComponent },
+  { path: 'horarios', component: HorariosComponent },
+  { path: 'regis-novedad', component: RegistroNovedadComponent },
+  { path: 'preguntas-frecuentes', component: PreguntasFrecuentesComponent },
+  { path: 'perfil-aprendiz', component: PerfilAprendizComponent },
+  { path: 'login-p', component: LoginComponent },
+  { path: 'instructor', component: HeaderComponent },
+  { path: 'aprendiz', component: HeaderComponent },
+  { path: 'admin', component: DataCoordinacionComponent},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

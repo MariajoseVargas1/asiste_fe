@@ -1,6 +1,67 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="image_firts">
+            <img
+              src="./assets/img/_logo_asiste_horizontal.png"
+              alt="logo_asiste_horizontal"
+              width="150"
+              height="50"
+            />
+          </div>
+          <br /><!--CAMBIAR-->
+          <h5 class="card-title text-center mb-4">
+            Ingreso de usuarios registrados
+          </h5>
 
-<form [formGroup]="form">
-<input formControlName="document" type="number">
-<input formControlName="password" type="text">
-<button (click)="onClick()" [disabled]="!form.valid">Enviar</button>
-</form>
+          <form [formGroup]="form">
+            <div class="form-floating">
+              <input
+                formControlName="document"
+                type="number"
+                class="form-control"
+                id="floatingInput"
+                placeholder=""
+              />
+              <label for="floatingInput"
+                ><i class="bi bi-file-person"></i>Número de documento</label
+              >
+            </div>
+            <br /><!--CAMBIAR-->
+            <div class="form-floating">
+              <input
+                formControlName="password"
+                type="text"
+                class="form-control"
+                id="contrasena"
+                placeholder=""
+              />
+              <br /><!--mirar lo del pattern-->
+              <a routerLink="/forgot">¿Olvidó su contraseña?</a>
+              <label for="floatingPassword" type="text"
+                ><i class="bi bi-shield-lock-fill"></i>Contraseña</label
+              >
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary rounded"
+              (click)="onClick()"
+              [disabled]="!form.valid"
+            >
+              Enviar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<img
+  src="/assets/img/absurd.design - Chapter 1 - 07.png"
+  alt="Imagen-form-login"
+  width="430"
+  height="200"
+  class="img-fluid"
+/>
