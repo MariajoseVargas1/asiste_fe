@@ -62,22 +62,12 @@ margin-top: -510px;
   color: #504f4f;
 }
 
-/* .fondo{
-  background-image: url('./assets/img/volver-la-escuela-patrón-transparente-de-vector-blanco-y-negro-documento-digital-esquema-educativo-fondo-iconos-clase-línea-223839269.webp') ;
- } */
 
 /*ESTILOS DE LA DATA-COORDINACION E INICIO INSTRUCTOR*/
 .container .px-4{
   margin-top: 70px;
 }
+
 /*ESTILOS DE PERFIL-APRENDIZ*/
 
 /*ESTILOS DE PREGUNTAS FRECUENTES*/
-.mat-mdc-form-field + .mat-mdc-form-field {
-  margin-left: 8px;
-}
-
-/* 
-.container-fluid{
-  background-image: "./global-fondo";
-} */
