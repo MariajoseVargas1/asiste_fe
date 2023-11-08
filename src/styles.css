@@ -9,8 +9,9 @@ body{
 }*/
 /*ESTILOS PARA EL NAVBAR*/
 .navbar-expand-md{
-  margin-top: 10px;
+  margin-top: 10px; 
   margin-left: 10px;
+
 }
 
 .nav-link{
@@ -50,6 +51,16 @@ body{
 
 /*ESTILOS DE  REGISTRO DE NOVEDAD*/
 
+.card-grande{
+margin-top: -510px;
+/* box-shadow: 10px 5px 2px 2px rgba(194, 91, 91, 0); */
+}
+
+.titulo{
+  margin-top: 240px;
+  margin-left: 35px;
+  color: #504f4f;
+}
 
 /* .fondo{
   background-image: url('./assets/img/volver-la-escuela-patrón-transparente-de-vector-blanco-y-negro-documento-digital-esquema-educativo-fondo-iconos-clase-línea-223839269.webp') ;
