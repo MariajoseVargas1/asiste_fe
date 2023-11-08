@@ -68,6 +68,27 @@ margin-top: -510px;
   margin-top: 70px;
 }
 
-/*ESTILOS DE PERFIL-APRENDIZ*/
+/*ESTILOS DE PERFIL-APRENDIZ y PERFIL-INSTRUCTOR*/
+.titulo-ac{
+  margin-left: -170px;
+  color: #504f4f;
+}
+.fto-name{
+  margin-left: -130px;
+  margin-top: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #41A72A;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2 );
+  
+}
+.form-act{
+  margin-left: 250px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2 ); */
+  margin-top: -102px;
+}
+
+
 
 /*ESTILOS DE PREGUNTAS FRECUENTES*/
