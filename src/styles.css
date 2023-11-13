@@ -1,12 +1,13 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
-/* IMAGEN GLOGAL DE FONDO 
+/* IMAGEN GLOGAL DE FONDO */
+
 body{
-  background-image: url('./assets/img/global-fondo.jpg');
+  background-image: url('./assets/img/global-fondo2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 
-}*/
+}
 /*ESTILOS PARA EL NAVBAR*/
 .navbar-expand-md{
   margin-top: 10px; 
@@ -74,8 +75,8 @@ margin-top: -510px;
   color: #504f4f;
 }
 .fto-name{
-  margin-left: -130px;
-  margin-top: -60px;
+  margin-left: 15px; /*revisar*/
+  margin-top: -10px;
   width: 200px;
   height: 200px;
   border-radius: 50%;

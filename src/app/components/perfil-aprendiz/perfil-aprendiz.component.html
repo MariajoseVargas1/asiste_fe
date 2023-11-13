@@ -1,342 +1,143 @@
 <div class="titulo-ac">
-<div class="container px-4 py-5">
+  <div class="container px-4 py-5">
     <h4 class="pb-2 border-bottom">Actualización de perfil</h4>
-</div>
+  </div>
 </div>
 <div class="fto-name">
-<div class="card text-center" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">Nombre aprendiz</h5>
-      <button class="btn btn-primary" >
-        <i class="bi bi-cloud-upload-fill"></i>
-      </button>
-    </div>
-  </div>
+  <button class="btn btn-primary">
+    <label for="fileUpload"><i class="bi bi-cloud-upload-fill"></i></label>
+    <input type="file" id="fileUpload" class="visually-hidden" />
+  </button>
 </div>
+
 <div class="form-act">
-  <div class="d-flex  align-items-center ">
-<div class="card-principal">
-        <div class="card p-4 form-act">
-            <form>
-                <div class="mb-4">
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input class="form-control" type="text" placeholder="Nombre aprendiz" readonly>
-                </div>
-                <div class="form-group row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                    
-                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
-                    
-                </div>
-                <!-- <div *ngIf="parte1Visible"></div> -->
-            </form>
-        </div>
-    </div>
-</div>
-
-
-</div>
-
-   
-<!--<input class="form-control" type="text" placeholder="Readonly input here…" readonly>-->
-<!-- 
-  <div class="d-flex justify-content-center align-items-center vh-100">
-    <div class="card-grande">
-    <div class="card p-4">
-      <form>
-        <div *ngIf="parte1Visible">
-          Primera vista
-          <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input
-              type="text"
-              class="form-control"
-              id="nombre"
-              placeholder="Ingrese su nombre"
-              required
-            />
-          </div>
-  
-          <div class="mb-3">
-            <label for="apellidos" class="form-label">Apellidos</label>
-            <input
-              type="text"
-              class="form-control"
-              id="apellidos"
-              placeholder="Ingrese sus apellidos"
-              required
-            />
-          </div>
-  
-          <div class="mb-3">
-            <label class="form-label">Tipo de documento: </label>
-            <div class="form-check ">
+  <div class="d-flex align-items-center">
+    <div class="card-principal">
+      <div class="card p-4 form-act">
+        <form class="actualización-perfil">
+          <div *ngIf="primeraVista">
+            <!-- Primera vista-->
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
               <input
-                class="form-check-input"
-                type="radio"
-                name="opcionRadio"
-                id="opcion1"
-                value="opcion1"
+                class="form-control"
+                type="text"
+                placeholder="Nombre aprendiz"
+                readonly
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Apellidos</label>
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Apellidos aprendiz"
+                readonly
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="ficha" class="form-label"
+                >Programa de formación</label
+              >
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Programa aprendiz"
+                readonly
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="ficha" class="form-label">Teléfono</label>
+              <input
+                class="form-control"
+                type="number"
+                placeholder="Teléfono aprendiz"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Dirección</label>
+              <input
+                type="text"
+                class="form-control"
+                id="apellidos"
+                placeholder="Dirección aprendiz"
+              />
+            </div>
+
+            <button class="btn btn-primary" (click)="vista2()">
+              Siguiente
+            </button>
+          </div>
+
+          <div *ngIf="!primeraVista && segundaVista">
+            <!-- Segunda vista -->
+
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Correo personal</label>
+              <input
+                type="email"
+                class="form-control"
+                id="correo"
+                placeholder="Correo personal aprendiz"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="descripcion" class="form-label">Descripción</label>
+              <textarea
+                class="form-control"
+                id="descripcion"
+                rows="4"
+                placeholder="Agregue una breve descripción sobre usted"
                 required
-              />
-              <label class="form-check-label" for="opcion1">T.I</label>
+              ></textarea>
             </div>
-            <div class="form-check form-check-inline">
+
+            <div class="mb-3">
+              <label for="antigua-contraseña" class="form-label"
+                >Antigua contraseña</label
+              >
               <input
-                class="form-check-input"
-                type="radio"
-                name="opcionRadio"
-                id="opcion2"
-                value="opcion2"
+                type="password"
+                class="form-control"
+                id="contraseña"
+                placeholder="Ingrese su antigua contraseña"
               />
-              <label class="form-check-label" for="opcion2">C.C</label>
             </div>
-            <div class="form-check form-check-inline">
+
+            <div class="mb-3">
+              <label for="nueva-contraseña" class="form-label"
+                >Nueva contraseña</label
+              >
               <input
-                class="form-check-input"
-                type="radio"
-                name="opcionRadio"
-                id="opcion2"
-                value="opcion2"
+                type="password"
+                class="form-control"
+                id="contraseña"
+                placeholder="Ingrese su nueva contraseña"
+                maxlength="10"
               />
-              <label class="form-check-label" for="opcion2">C.E</label>
             </div>
-            <div class="form-check form-check-inline">
+
+            <div class="mb-3">
+              <label for="confirmación-contraseña" class="form-label"
+                >Confirme su contraseña</label
+              >
               <input
-                class="form-check-input"
-                type="radio"
-                name="opcionRadio"
-                id="opcion2"
-                value="opcion2"
+                type="password"
+                class="form-control"
+                id="contraseña"
+                placeholder="Confirme su nueva contraseña"
+                maxlength="10"
               />
-              <label class="form-check-label" for="opcion2">PASAPORTE</label>
+              <button class="btn btn-success" type="submit">Enviar</button>
             </div>
           </div>
-  
-          <div class="mb-3">
-            <label for="ficha" class="form-label">Ficha</label>
-            <input
-              type="number"
-              class="form-control"
-              id="ficha"
-              placeholder="Ingrese su número de ficha"
-            />
-          </div>
-  
-          <div class="mb-3">
-            <label for="programa">Programa de formación</label>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Seleccione su programa de formación</option>
-              <option value="1">ADSO</option>
-              <option value="2">ADSI</option>
-              <option value="3">DVEI</option>
-            </select>
-          </div>
-  
-          <button class="btn btn-primary" (click)="mostrarParte2()">
-            Siguiente
-          </button>
-        </div>
-  
-        <div *ngIf="!parte1Visible && parte2Visible">
-  
-          <!-- Segunda vista 
-          <div class="mb-3">
-            <label class="form-label">Jornada </label>
-            <div class="form-check ">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="opcionRadio"
-                id="opcion1"
-                value="opcion1"
-                required
-              />
-              <label class="form-check-label" for="opcion1">Diurna</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="opcionRadio"
-                id="opcion2"
-                value="opcion2"
-              />
-              <label class="form-check-label" for="opcion2">Tarde</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="opcionRadio"
-                id="opcion2"
-                value="opcion2"
-              />
-              <label class="form-check-label" for="opcion2">Nocturna</label>
-            </div>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Nivel de formación</label>
-            <div class="form-check  ">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="opcionRadio"
-                id="opcion1"
-                value="opcion1"
-                required
-              />
-              <label class="form-check-label form-check-inline" for="opcion1">Técnico</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="opcionRadio"
-                id="opcion2"
-                value="opcion2"
-              />
-              <label class="form-check-label" for="opcion2">Tecnólogo</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="opcionRadio"
-                id="opcion2"
-                value="opcion2"
-              />
-              <label class="form-check-label" for="opcion2">Auxiliar</label>
-            </div>
-          </div>
-          <div class="mb-3">
-            <label for="celular" class="form-label">Teléfono/Celular</label>
-            <input
-              type="tel"
-              class="form-control"
-              id="celular"
-              placeholder="123-456-7890"
-            />
-          </div>
-  
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              placeholder="micorreo@dominio.com"
-            />
-          </div>
-  
-          <div class="mb-3">
-            <label for="email-i" class="form-label">Correo instructor líder</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email-i"
-              placeholder="instructorcorreo@dominio.com"
-            />
-          </div>
-  
-          <button class="btn btn-success" type="submit">Enviar</button>
-        </div>
-      </form>
-    </div>
-  </div>
-  </div>
-  <div class="fondo"></div>
-  
-  <!-- <textarea class="form-control" id="comentarios" rows="4" placeholder="Ingrese sus comentarios aquí" required></textarea>
-  FALTO EL TEXT AREA-->
-
- 
-
-
-
-
-<!--<form>
-  <div class="form-group">
-    <label for="exampleFormControlFile1">Example file input</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-  </div>
-</form>
-
-ESTO PARA LO DE LA IMAGEN, OSEA SUBIR ARCHIVO-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="container px-4 py-5">
-    <h2 class="pb-2 border-bottom">Fichas asociadas</h2>
-</div>
-<div class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 ">
-        <div class="card w-75 mx-auto">
-          <div class="card-body d-flex flex-column align-items-center text-center">
-    <div class="row row-cols-1 row-cols-md-2 align-items-md-center ">
-      <div class="col d-flex flex-column align-items-start gap-2">
-        <h2 class="fw-bold text-body-emphasis">blaaaaaaaaaaa</h2>
-        <p class="text-body-secondary">
-          Nose que poner aqui o si dejar eso como la ficha principal
-          pero blablablablabla
-        </p>
-        <a href="#" class="btn btn-primary btn-lg">Primary button(por ahora)</a>
-      </div>
-  
-
-
-<div class="container mt-5">
-    <div class="row">
-      <div class="col-md-6 ml-3">
-        <div class="card w-75 mx-auto">
-          <div class="card-body d-flex flex-column align-items-center text-center">   
-            <h5 class="card-title">Nombre del aprendiz</h5>
-            <p class="card-text">Datos extras</p>
-            <div class="d-flex justify-content-center">
-            <button class="btn btn-primary "><i class="bi bi-cloud-upload-fill"></i></button>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>
 </div>
-
-
-
-  <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <!-- Formulario con 6 campos 
-        <!-- <form (ngSubmit)="submitForm()"> 
-          <!-- Campos del formulario aquí (input, textarea, etc.) 
-          <!-- Todos los campos deben ser obligatorios usando el atributo 'required' 
-          <!-- Ejemplo: 
-          <div class="mb-3">
-            <label for="campo1" class="form-label">Campo 1</label>
-            <input type="text" class="form-control" id="campo1" required>
-          </div>
-          <!-- Otros campos del formulario aquí 
-          
-          <div class="mb-3">
-            <label for="textarea" class="form-label">Texto</label>
-            <textarea class="form-control" id="textarea" rows="3" required></textarea>
-          </div>
-          
-          <!-- Botón de siguiente 
-          <button type="submit" class="btn btn-primary">Siguiente</button>
-        <!-- </form> 
-      </div>
-    </div>
-  </div> -->
