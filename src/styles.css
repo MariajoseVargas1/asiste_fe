@@ -99,3 +99,9 @@ margin-top: -510px;
   color: #504f4f;
 }
 
+.horario-container{
+  max-width: 1000px;
+  margin-top: -20px;
+  /* display: inline-block; */
+  /* text-align: left;  */
+}

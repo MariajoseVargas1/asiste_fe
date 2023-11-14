@@ -19,6 +19,7 @@ import { PerfilInstructorComponent } from './components/perfil-instructor/perfil
 import { InicioInstructorComponent } from './components/inicio-instructor/inicio-instructor.component';
 import { DataCoordinacionComponent } from './components/data-coordinacion/data-coordinacion.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FullCalendarModule } from '@fullcalendar/angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FullCalendarModule// mirar si lo cambio por horarios
   ],
   providers: [],
   bootstrap: [AppComponent]
