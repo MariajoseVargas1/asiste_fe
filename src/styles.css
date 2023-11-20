@@ -108,3 +108,9 @@ margin-top: -510px;
 
 /* ESTILOS PARA EL CALENDARIO DE HORARIOS */
 
+
+.titulo-horario{
+  margin-top: 130px;
+  margin-left: -80px;
+  color: #504f4f;
+}
