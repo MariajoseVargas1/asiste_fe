@@ -20,6 +20,8 @@ import { InicioInstructorComponent } from './components/inicio-instructor/inicio
 import { DataCoordinacionComponent } from './components/data-coordinacion/data-coordinacion.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { ChartModule } from 'primeng/chart'; 
+import { NgApexchartsModule } from 'ng-apexcharts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +46,9 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FullCalendarModule// mirar si lo cambio por horarios
+    FullCalendarModule,// mirar si lo cambio por horarios
+    NgApexchartsModule,
+    ChartModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,35 +5,40 @@ import * as ApexCharts from 'apexcharts';
   selector: 'app-status-asistencia',
   templateUrl: './status-asistencia.component.html'
 })
-export class StatusAsistenciaComponent implements AfterViewInit{
+export class StatusAsistenciaComponent{
 
-  ngAfterViewInit() {
-    const options = {
-      chart: {
-        type: 'polarArea'
-      },
-      series: [{
-        name: 'sales',
-        data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
-      },{
-        name: 'clase',
-        data: ['Base de datos','Java POO','Blablabla']
-      },{
-        name: 'trimestres',
-        data: ['Primer trismestre','Segundo trimestre','Tercer trimestre']
-      },{
-        name: 'serie_vacia_1',
-        data: []
-      },{
-        name: 'serie_vacia_2',
-        data: []
-      }],
-      xaxis: {
-        categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
-      }
-    };
+  title = 'GFG'; 
+  data = { 
+      datasets: [{ 
+          data: [11,16,7,3,14], 
 
-    const chart = new ApexCharts(document.querySelector('#polar-chart'), options);
-    chart.render();
-  }
+          label: 'Su porcentaje de fallas es'//mirar si dejo eso nose donde se muestra ni que muestra 
+      }, 
+
+      ], 
+      labels: ["Aaaaaaaaaa","B","C","D","E"] 
+  }; 
+
+  chartOptions = { 
+      plugins: { 
+          legend: { 
+              labels: { 
+                  color: '#495057' 
+              } 
+          } 
+      }, 
+      scales: { 
+          r: { 
+              grid: { 
+                  color: '#ebedef' 
+              } 
+          } 
+      } 
+  } 
 }
+
+
+
+
+
+// 
