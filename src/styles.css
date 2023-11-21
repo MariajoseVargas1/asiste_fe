@@ -113,4 +113,43 @@ margin-top: -510px;
   margin-top: 130px;
   margin-left: -80px;
   color: #504f4f;
+
+}
+
+/* ESTILOS PARA EL CALENDARIO DE HORARIOS */
+
+.container-status {
+  display: flex;
+  justify-content: flex-start; /* Alinea el contenido hacia la izquierda */
+  align-items: center;
+  height: 100vh;
+  padding-left: 20px; /* Añade espacio a la izquierda */
+}
+
+.status {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 400px;
+  color: #504f4f;
+  align-items: center;
+  padding-right: 20px; /* Espacio entre el status y la tarjeta */
+}
+
+.card-status {
+  width: 50%; /* Ancho de la tarjeta */
+  max-width: 400px; /* Ancho máximo */
+  /* margin-right: 400px; ARREGLAR LA MARGEN DE LA DERECHA*/
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body-status {
+  padding: 20px;
+}
+
+#polar-chart {
+  height: 300px; /* Altura del gráfico */
+  /* Ajusta cualquier otro estilo según sea necesario para el gráfico */
 }

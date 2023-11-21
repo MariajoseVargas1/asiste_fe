@@ -9,10 +9,11 @@ import { PerfilAprendizComponent } from './components/perfil-aprendiz/perfil-apr
 import { LoginComponent } from './pruebas/comp/login/login.component';
 import { GridInstructorComponent } from './components/grid-instructor/grid-instructor.component';
 import { DataCoordinacionComponent } from './components/data-coordinacion/data-coordinacion.component';
+import { StatusAsistenciaComponent } from './components/status-asistencia/status-asistencia.component';
 // imports: [ RouterModule.forRoot(routes) ]
 const routes: Routes = [
   { path: 'navbar', component: HeaderComponent },
-  { path: 'inicio', component: GridAprendizComponent },
+  { path: 'inicio', component: StatusAsistenciaComponent},
   { path: 'horarios', component: HorariosComponent },
   { path: 'regis-novedad', component: RegistroNovedadComponent },
   { path: 'preguntas-frecuentes', component: PreguntasFrecuentesComponent },
