@@ -10,9 +10,9 @@ export class StatusAsistenciaComponent{
   title = 'GFG'; 
   data = { 
       datasets: [{ 
-          data: [11,16,7,3,14], 
+          data: [10,20,30,40,50,60,70,80,90], 
 
-          label: 'Su porcentaje de fallas es'//mirar si dejo eso nose donde se muestra ni que muestra 
+          label: 'Su porcentaje de fallas es'//texto que se muestra al pasar sobre alguna parte del grafico
       }, 
 
       ], 
@@ -36,9 +36,3 @@ export class StatusAsistenciaComponent{
       } 
   } 
 }
-
-
-
-
-
-// 

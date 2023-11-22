@@ -115,8 +115,11 @@ margin-top: -510px;
   color: #504f4f;
 
 }
+.calendar-container{
+  cursor: pointer;
+}
 
-/* ESTILOS PARA EL CALENDARIO DE HORARIOS */
+/* ESTILOS PARA EL GRAFICO Y TODO EL COMPONENTE DE ESTATUS DE ASISTENCIA */
 
 .container-status {
   display: flex;
@@ -129,17 +132,18 @@ margin-top: -510px;
 .status {
   flex: 1;
   display: flex;
-  justify-content: flex-end;
-  margin-right: 400px;
-  color: #504f4f;
+  /* justify-content: flex-end; */
+  margin-right: 90px;
+  color: #636363;
   align-items: center;
-  padding-right: 20px; /* Espacio entre el status y la tarjeta */
+  padding-right: 10px; /* Espacio entre el status y la tarjeta */
 }
 
 .card-status {
-  width: 50%; /* Ancho de la tarjeta */
-  max-width: 400px; /* Ancho máximo */
-  /* margin-right: 400px; ARREGLAR LA MARGEN DE LA DERECHA*/
+  margin-top: 70px;
+  width: 70%; /* Ancho de la tarjeta */
+  max-width: 450px; /* Ancho máximo */
+  margin-right: 100px; 
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

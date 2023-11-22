@@ -12,6 +12,7 @@ import { DataCoordinacionComponent } from './components/data-coordinacion/data-c
 import { StatusAsistenciaComponent } from './components/status-asistencia/status-asistencia.component';
 // imports: [ RouterModule.forRoot(routes) ]
 const routes: Routes = [
+  { path: '', component: LoginComponent },
   { path: 'navbar', component: HeaderComponent },
   { path: 'inicio', component: StatusAsistenciaComponent},
   { path: 'horarios', component: HorariosComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'instructor', component: HeaderComponent },
   { path: 'aprendiz', component: HeaderComponent },
   { path: 'admin', component: DataCoordinacionComponent},
+  // { path: '**', component: NoEncontradoComponent},
 ];
 
 @NgModule({

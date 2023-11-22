@@ -1,34 +1,20 @@
-<div id="GFG"> 
-  <h1 style="color:green">PRUEBA</h1> 
-  <h2>Para estatus </h2> 
-  <div style="width:80%;"> 
-      <p-chart type="polarArea" 
-              [data]="data"  
-              [options]="chartOptions"  
-              [style]="{'width': '50%'}"> 
-      </p-chart> 
-  </div> 
+<div class="container-status">
+<div class="status">
+  <!-- <h1 style="color: green">PRUEBA</h1> -->
+  <h2>Estatus de asistencia<hr></h2>
+  <!-- <h3>A continuación encontrara un grafico que le inidicara su porcentaje de fallas a lo largo del trimestre</h3>  -->
 </div>
-
-
-<!-- <div class="container-status">
-    <div class="status">
-      <h2>Estatus de asistencia<hr></h2>
-    </div>
-    <div class="card-status">
-      <div class="card-body-status">
-        <div id="polar-chart"><apx-chart></apx-chart></div>
+<div class="card-status">
+  <div class="card-body-status">
+    <div id="GFG">
+        <p-chart
+          type="polarArea"
+          [data]="data"
+          [options]="chartOptions"
+          [style]="{ width: '70%' }">
+        </p-chart>
       </div>
     </div>
-  </div> -->
+  </div>
+</div>
 
-<!--  -->
-
-
-
-
-
-
-
-
-<!--  -->

@@ -1,12 +1,9 @@
-import {
-  Component,
-  ViewChild,
-  ElementRef,
-  AfterContentInit,
-} from '@angular/core';
+import {Component, ViewChild, ElementRef,AfterContentInit,} from '@angular/core';
 import { CalendarOptions, EventClickArg } from '@fullcalendar/core'; // useful for typechecking
 import dayGridPlugin from '@fullcalendar/daygrid';
 import { FullCalendarComponent } from '@fullcalendar/angular';
+import esLocale from '@fullcalendar/core/locales/es';
+
 
 @Component({
   selector: 'app-horarios',
@@ -22,6 +19,8 @@ export class HorariosComponent {
       // right: 'dayGridMonth,timeGridWeek,timeGridDay',// ESTO ES PARA LO QUE SE VE AL LADO DERECHO DEL CALENDARIO
     },
 
+    locale: esLocale,
+
     eventDurationEditable: false,
     visibleRange: {
       start: '2023-10-02',
@@ -33,8 +32,8 @@ export class HorariosComponent {
         start: '2023-10-02 T09:00:00',
         daysOfWeek: [1], // Esto significa que el evento ocurre solo los lunes
         // display: 'background', // Esto muestra el evento como fondo
-        backgroundColor: '#3B8C66', // Color del evento
-        borderColor: '#3B8C66', // Color del borde del evento
+        backgroundColor: '#0CABA8', // Color del evento
+        borderColor: '#0CABA8', // Color del borde del evento
         startEditable: false,
         durationEditable: false,
         overlap: false,
@@ -51,10 +50,11 @@ export class HorariosComponent {
       {
         title: 'Despliegue Fullstack',
         start: '2023-10-02 T09:00:00',
+        style:"cursor: pointer",
         daysOfWeek: [2], // Esto significa que el evento ocurre solo los lunes
         // display: 'background', // Esto muestra el evento como fondo
-        backgroundColor: 'green', // Color del evento
-        borderColor: 'green', // Color del borde del evento
+        backgroundColor: '#008F8C', // Color del evento
+        borderColor: '#008F8C', // Color del borde del evento
         startEditable: false,
         durationEditable: false,
         overlap: false,
@@ -73,8 +73,8 @@ export class HorariosComponent {
         start: '2023-10-02 T09:00:00',
         daysOfWeek: [3], // Esto significa que el evento ocurre solo los lunes
         // display: 'background', // Esto muestra el evento como fondo
-        backgroundColor: '#3B8C66', // Color del evento
-        borderColor: '#3B8C66', // Color del borde del evento
+        backgroundColor: '#0CABA8', // Color del evento
+        borderColor: '#0CABA8', // Color del borde del evento
         startEditable: false,
         durationEditable: false,
         overlap: false,
@@ -93,8 +93,8 @@ export class HorariosComponent {
         start: '2023-10-02 T09:00:00',
         daysOfWeek: [4], // Esto significa que el evento ocurre solo los lunes
         // display: 'background', // Esto muestra el evento como fondo
-        backgroundColor: 'green', // Color del evento
-        borderColor: 'green', // Color del borde del evento
+        backgroundColor: '#008F8C', // Color del evento
+        borderColor: '#008F8C', // Color del borde del evento
         startEditable: false,
         durationEditable: false,
         overlap: false,
@@ -113,8 +113,8 @@ export class HorariosComponent {
         start: '2023-10-02 T09:00:00',
         daysOfWeek: [5], // Esto significa que el evento ocurre solo los lunes
         // display: 'background', // Esto muestra el evento como fondo
-        backgroundColor: '#3B8C66', // Color del evento
-        borderColor: '#3B8C66', // Color del borde del evento
+        backgroundColor: '#0CABA8', // Color del evento
+        borderColor: '#0CABA8', // Color del borde del evento
         startEditable: false,
         durationEditable: false,
         overlap: false,
@@ -133,8 +133,8 @@ export class HorariosComponent {
         start: '2023-10-02 T09:00:00',
         daysOfWeek: [6], // Esto significa que el evento ocurre solo los lunes
         // display: 'background', // Esto muestra el evento como fondo
-        backgroundColor: 'green', // Color del evento
-        borderColor: 'green', // Color del borde del evento
+        backgroundColor: '#008F8C', // Color del evento
+        borderColor: '#008F8C', // Color del borde del evento
         startEditable: false,
         durationEditable: false,
         overlap: false,
@@ -153,8 +153,8 @@ export class HorariosComponent {
         start: '2023-10-02 T09:00:00',
         daysOfWeek: [6], // Esto significa que el evento ocurre solo los lunes
         // display: 'background', // Esto muestra el evento como fondo
-        backgroundColor: '#3B8C66', // Color del evento
-        borderColor: '#3B8C66', // Color del borde del evento
+        backgroundColor: '#0CABA8', // Color del evento
+        borderColor: '#0CABA8', // Color del borde del evento
         startEditable: false,
         durationEditable: false,
         overlap: false,
@@ -177,7 +177,7 @@ export class HorariosComponent {
     const description = clickInfo.event.extendedProps
       ? clickInfo.event.extendedProps['description']
       : '';
-    alert('Evento: ' + clickInfo.event.title + '\nDescripción: ' + description);
+    alert('Evento: ' + clickInfo.event.title + '\nDescripción: ' + description);//para cambiar por un modal en lugar el alert
   }
 
   someMethod() {
@@ -185,5 +185,6 @@ export class HorariosComponent {
     calendarApi.next();
   }
 }
+
 
 //aqui tengo que ver como arreglar que las descripciones se vean mejor
