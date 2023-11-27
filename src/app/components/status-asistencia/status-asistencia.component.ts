@@ -9,8 +9,13 @@ export class StatusAsistenciaComponent implements OnInit {
 
   title = 'GFG';
   asistenciaEstudiante = {
-    'Fundamentos': 21, // Ejemplo: ha excedido el 20% de fallas
-    'Otras Clases': 15.23,
+    'Derecho fundamental al trabajo': 21, // Ejemplo: ha excedido el 20% de fallas
+    'Despliegue Fullstack': 15.23,
+    'Este es repetido ver si solo dejo uno': 15.23,
+    'Migración y Testing':8.3,
+    'Asesoría de Proyecto':25,// Ejemplo: ha excedido el 20% de fallas
+    'Ambiental':0.2,
+    'Salud y seguridad en el trabajo':0.2,
     // Agregar más asignaturas según sea necesario
   };
 
@@ -30,6 +35,8 @@ export class StatusAsistenciaComponent implements OnInit {
       },
     ],
     labels: this.asignaturas.map((asig, index) => `${asig} (${this.asistenciaArray[index]}%)`),
+
+    
   };
 
   chartOptions = {
@@ -55,22 +62,25 @@ export class StatusAsistenciaComponent implements OnInit {
 
   ngOnInit() {
     this.verificarBajaAsistencia();
+    this.asistenciaArray = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]; // Valores de 10 en 10 hasta 100
   }
 
   verificarBajaAsistencia() {
-    const porcentajeMinimo = 20.5;
-    const asistenciaBaja = this.asistenciaArray.filter(asis => asis < porcentajeMinimo);
-
+    const porcentajeMinimo = 20;
+    const asistenciaBaja = this.asistenciaArray.filter(asis => asis >= porcentajeMinimo);
+  
     if (asistenciaBaja.length > 0) {
-      const indice = this.asistenciaArray.findIndex(asis => asis === asistenciaBaja[0]);
-      this.manejarBajaAsistencia(this.asignaturas[indice], asistenciaBaja[0]);
+      for (let i = 0; i < asistenciaBaja.length; i++) {
+        const indice = this.asistenciaArray.findIndex(asis => asis === asistenciaBaja[i]);
+        this.manejarBajaAsistencia(this.asignaturas[indice], asistenciaBaja[i]);
+      }
     } else {
       console.log(`El estudiante tiene asistencia mayor al ${porcentajeMinimo}% en todas las asignaturas.`);
     }
   }
 
   manejarBajaAsistencia(asignatura: string, porcentaje: number) {
-    const mensaje = `El estudiante tiene una asistencia del ${porcentaje}% en ${asignatura}. ¡Necesita atención!`;
+    const mensaje = `Su nivel de fallas equivale al ${porcentaje}% en la competencia de ${asignatura}. ¡!`;
     alert(mensaje);
   }
   getColor() {
