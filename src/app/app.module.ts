@@ -22,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { ChartModule } from 'primeng/chart'; 
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { AgGridModule } from 'ag-grid-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,9 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     PerfilAprendizComponent,
     PerfilInstructorComponent,
     InicioInstructorComponent,
-    DataCoordinacionComponent
+    DataCoordinacionComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     HttpClientModule,
     FullCalendarModule,// mirar si lo cambio por horarios
     NgApexchartsModule,
-    ChartModule 
+    ChartModule,
+    AgGridModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

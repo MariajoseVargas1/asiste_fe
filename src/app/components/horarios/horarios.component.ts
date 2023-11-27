@@ -5,12 +5,18 @@ import { FullCalendarComponent } from '@fullcalendar/angular';
 import esLocale from '@fullcalendar/core/locales/es';
 
 
+
 @Component({
   selector: 'app-horarios',
   templateUrl: './horarios.component.html',
 })
 export class HorariosComponent {
-  @ViewChild('calendar')
+  
+  @ViewChild('calendar') calendarRef!: ElementRef;
+
+  showTooltip = false;
+  eventDescription = '';
+
   calendarComponent!: FullCalendarComponent;
   calendarOptions: CalendarOptions = {
     headerToolbar: {
@@ -169,8 +175,8 @@ export class HorariosComponent {
         ],
       },
     ],
-    eventClick: this.handleEventClick.bind(this),
-    plugins: [dayGridPlugin],
+  eventClick: this.handleEventClick.bind(this),
+plugins: [dayGridPlugin],
   };
 
   handleEventClick(clickInfo: EventClickArg) {

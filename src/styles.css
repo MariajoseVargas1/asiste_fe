@@ -1,4 +1,6 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
+@import 'ag-grid-community/styles/ag-grid.css'; /* SIEMPRE ES NECESARIO ES EL CSS ESTRUCTURAL CENTRAL QUE NECESITAN EL GRID, SIN ESTO EL GRID NO SIRVE*/
+@import 'ag-grid-community/styles/ag-theme-alpine.css'; /* ES OPCIONAL ES EL TEMA DE CUADRICULA ELEGIDO,ESTA POR VERSE*/
 
 /* IMAGEN GLOGAL DE FONDO */
 
@@ -156,4 +158,13 @@ margin-top: -510px;
 #polar-chart {
   height: 300px; /* Altura del gráfico */
   /* Ajusta cualquier otro estilo según sea necesario para el gráfico */
+}
+/* ESTILOS PARA EL GRID */
+
+.container-grid {
+  height: 100%;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
 }
