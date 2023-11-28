@@ -1,50 +1,33 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AgGridAngular } from 'ag-grid-angular';
 import { CellClickedEvent, ColDef, GridReadyEvent } from 'ag-grid-community';
 import { Observable } from 'rxjs';
+import 'ag-grid-enterprise';
 
 @Component({
   selector: 'app-grid-instructor',
   templateUrl: './grid-instructor.component.html'
 })
-export class GridInstructorComponent {
- // Cada definición de columna da como resultado una columna.
- public columnDefs: ColDef[] = [
-  { field: 'make'},
-  { field: 'model'},
-  { field: 'price' }
-];
+export class GridInstructorComponent implements OnInit{
 
-// DefaultColDef sets props common to all Columns-DefaultColDef establece accesorios comunes a todas las columnas
-public defaultColDef: ColDef = {
-  sortable: true,
-  filter: true,
-};
+  rowData$!: Observable<any[]>;
 
-//La cuadrícula recibe datos de fila a través de la rowDatapropiedad de cuadrícula. Esto está conectado mediante un Observable.
 
-//Datos que se muestran en la cuadrícula.
-public rowData$!: Observable<any[]>;
 
-// Para acceder a la API de Grid
-@ViewChild(AgGridAngular) agGrid!: AgGridAngular;
+  colDefs: ColDef[] = [
+    {field: 'make', sortable:true, filter:true},//sortable:true, PARA ORDENAR filter:true PARA FILTRAR, SE DEN PONER EN TODAS COMO TRUE
+    {field: 'model',sortable:true, filter:true},
+    {field: 'price',sortable:true, filter:true},//definiciones de las columnas del grid
+  ];
 
-constructor(private http: HttpClient) {}
+  //para cargar datos de las filas desde el servidor, para esto se utiliza el http cliente de angular
+  constructor(private http: HttpClient){}
 
-// Ejemplo de carga de datos desde el servidor
-onGridReady(params: GridReadyEvent) {
-  this.rowData$ = this.http
-    .get<any[]>('https://www.ag-grid.com/example-assets/row-data.json');
+  ngOnInit(){
+    this.rowData$ = this.http.get<any[]>('https://www.ag-grid.com/example-assets/row-data.json');
+  }
 }
 
-// Example of consuming Grid Event
-onCellClicked( e: CellClickedEvent): void {
-  console.log('cellClicked', e);
-}
 
-// Example using Grid's API
-clearSelection(): void {
-  this.agGrid.api.deselectAll();
-}
-}
+

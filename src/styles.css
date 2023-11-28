@@ -162,9 +162,5 @@ margin-top: -510px;
 /* ESTILOS PARA EL GRID */
 
 .container-grid {
-  height: 100%;
-    width: 100%;
-    padding: 5px;
-    box-sizing: border-box;
-    -webkit-overflow-scrolling: touch;
+  margin-top: 150px;
 }

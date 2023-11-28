@@ -1,16 +1,8 @@
-<!-- Button to clear selection -->
-<button (click)="clearSelection()">Clear Selection</button>
-
-<!-- AG Grid Angular Component -->
-<ag-grid-angular
-    style="width: 100%; height: 500px"
+<div class="container-grid">
+    <ag-grid-angular
     class="ag-theme-alpine"
-    [columnDefs]="columnDefs"
-    [defaultColDef]="defaultColDef"
-    [rowData]="rowData$ | async"
-    [rowSelection]="'multiple'"
-    [animateRows]="true"
-    (gridReady)="onGridReady($event)"
-    (cellClicked)="onCellClicked($event)"
-></ag-grid-angular>
-<!--(cellClicked)="onCellClicked($event)" es para consumir los eventos de red -->
+    style="height: 500px; width: 500px;"
+    [rowData]="rowData$ |async"
+    [columnDefs]="colDefs"></ag-grid-angular>
+</div>
+<!-- con rowdata y columdefs se pasan los datos del grid al html? -->
