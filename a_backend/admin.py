@@ -10,7 +10,7 @@ from .models import AsistenciaNovedad
 from .models import AsistenciaPrograma
 
 
-# Register your models here.
+# Aqui estan registrados los modelos
 
 admin.site.register(AsistenciaAprendiz)
 admin.site.register(AsistenciaAsistencia)
