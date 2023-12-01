@@ -23,6 +23,9 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import { ChartModule } from 'primeng/chart'; 
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { AgGridModule } from 'ag-grid-angular';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AddAsistenciaComponent } from './components/add-asistencia/add-asistencia.component';
+import { EditAsistenciaComponent } from './components/edit-asistencia/edit-asistencia.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +45,8 @@ import { AgGridModule } from 'ag-grid-angular';
     PerfilInstructorComponent,
     InicioInstructorComponent,
     DataCoordinacionComponent,
+    AddAsistenciaComponent,
+    EditAsistenciaComponent,
 
 
   ],
@@ -53,6 +58,7 @@ import { AgGridModule } from 'ag-grid-angular';
     NgApexchartsModule,
     ChartModule,
     AgGridModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

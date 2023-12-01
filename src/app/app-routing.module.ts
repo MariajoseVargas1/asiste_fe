@@ -10,6 +10,8 @@ import { LoginComponent } from './pruebas/comp/login/login.component';
 import { GridInstructorComponent } from './components/grid-instructor/grid-instructor.component';
 import { DataCoordinacionComponent } from './components/data-coordinacion/data-coordinacion.component';
 import { StatusAsistenciaComponent } from './components/status-asistencia/status-asistencia.component';
+import { AddAsistenciaComponent } from './components/add-asistencia/add-asistencia.component';
+import { EditAsistenciaComponent } from './components/edit-asistencia/edit-asistencia.component';
 // imports: [ RouterModule.forRoot(routes) ]
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -23,6 +25,9 @@ const routes: Routes = [
   { path: 'instructor', component: HeaderComponent },
   { path: 'aprendiz', component: HeaderComponent },
   { path: 'admin', component: DataCoordinacionComponent},
+  { path: 'gridi', component: GridInstructorComponent},
+  { path: 'edit-asistencia', component: EditAsistenciaComponent},
+  { path: 'add-asistencia', component: AddAsistenciaComponent},
   // { path: '**', component: NoEncontradoComponent},
 ];
 

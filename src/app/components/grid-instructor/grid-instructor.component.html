@@ -1,8 +1,35 @@
 <div class="container-grid">
-    <ag-grid-angular
-    class="ag-theme-alpine"
-    style="height: 500px; width: 500px;"
-    [rowData]="rowData$ |async"
-    [columnDefs]="colDefs"></ag-grid-angular>
+   <div class="row">
+    <h3 class="text-center">Aprendices de la ficha</h3>
+    <!-- <a routerLink="/add-asistencia">
+        <span class="bi bi-person-fill-add"></span> Añadir asistencia
+      </a>  -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Asistio/No asistio</th>
+            <th scope="col">Competencia</th>
+           <th scope="col">Acciones</th>  <!-- va con respecto a los que el ngfor contiene-->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <th scope="row">{{user.id}}</th>
+            <td>{{user.nombre}}</td>
+            <td>{{user.asistio}}</td>
+            <td>{{user.competencia}}</td>
+            <td>
+                <a routerLink="/add-asistencia">
+                    <span class="bi bi-person-fill-add"></span> Añadir asistencia
+                  </a> 
+                <a routerLink="/edit-asistencia">
+                    <span class="bi bi-pencil-square"></span> Editar asistencia
+                  </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   </div>
 </div>
-<!-- con rowdata y columdefs se pasan los datos del grid al html? -->

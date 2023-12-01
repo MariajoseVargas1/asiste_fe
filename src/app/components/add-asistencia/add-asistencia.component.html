@@ -1,0 +1,37 @@
+<div class="my-5">
+    <div class="mx-auto w-25 " style="max-width:100%;">
+      <h2 class="text-center mb-3">Añadir asistencia</h2>
+      <form [formGroup]="form" (ngSubmit)="addUser()">
+        <!--Nombre-->
+        <div class="row">
+          <div class="col-md-12 form-group mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input id="name"  formControlName="name" type="text" name="name" class="form-control" placeholder="Name" required>
+          </div>
+        </div>
+
+        <!--Asistio/No asistio-->
+        <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="text" class="form-label">Asistio/No asistio</label>
+              <input id="text" type="text"  formControlName="text" name="text" class="form-control" placeholder="Asistio/No asistio" required>
+            </div>
+          </div>
+
+        <!--Competencia-->
+        <div class="row">
+            <div class="col-md-12 form-group mb-3">
+              <label for="text" class="form-label">Competencia</label>
+              <input id="text" type="text"  formControlName="text" name="text" class="form-control" placeholder="Competencia" required>
+            </div>
+          </div>
+        <div class="row">
+          <div class="col-md-12 form-group">
+            <input [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Submit">
+          </div>
+        </div>
+        <div>   
+        </div>
+      </form>
+    </div>
+  </div>
