@@ -1,16 +1,17 @@
 <div class="container-grid">
    <div class="row">
     <h3 class="text-center">Aprendices de la ficha</h3>
-    <!-- <a routerLink="/add-asistencia">
+    <a routerLink="/add-asistencia">
         <span class="bi bi-person-fill-add"></span> Añadir asistencia
-      </a>  -->
+      </a>  
       <table class="table table-striped">
         <thead>
           <tr>
             <th scope="col">Id</th>
             <th scope="col">Nombre</th>
             <th scope="col">Asistio/No asistio</th>
-            <th scope="col">Competencia</th>
+            <th scope="col">Ficha</th>
+            <th scope="col">Resultado de aprendizaje</th>
            <th scope="col">Acciones</th>  <!-- va con respecto a los que el ngfor contiene-->
           </tr>
         </thead>
@@ -19,6 +20,7 @@
             <th scope="row">{{user.id}}</th>
             <td>{{user.nombre}}</td>
             <td>{{user.asistio}}</td>
+            <td>{{user.ficha}}</td>
             <td>{{user.competencia}}</td>
             <td>
                 <a routerLink="/add-asistencia">

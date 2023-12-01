@@ -10,6 +10,7 @@ import { UsersService } from 'src/app/users.service';
   templateUrl: './add-asistencia.component.html'
 })
 export class AddAsistenciaComponent {
+user: any;
 
   constructor(private service: UsersService, private router: Router){}
   
@@ -21,6 +22,7 @@ export class AddAsistenciaComponent {
     form = new FormGroup({
       nombre: new FormControl('', Validators.required),
       asistio: new FormControl('', Validators.required),
+      ficha: new FormControl('', Validators.required),
       competencia: new FormControl('', Validators.required)
     });
 

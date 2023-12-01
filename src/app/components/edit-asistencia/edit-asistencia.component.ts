@@ -12,6 +12,7 @@ export class EditAsistenciaComponent {
 
   user?: any
   data: any
+addUser: any;
 
 
   constructor(private service: UsersService, private route: ActivatedRoute, private router : Router) { }
@@ -27,6 +28,7 @@ export class EditAsistenciaComponent {
   form = new FormGroup({
     nombre: new FormControl('', [Validators.required]),
     asistio: new FormControl('', [Validators.required]),
+    ficha: new FormControl('', [Validators.required]),
     competencia: new FormControl('', [Validators.required])
   })
 
@@ -34,6 +36,7 @@ export class EditAsistenciaComponent {
     this.data = this.form.value
     this.user.nombre = this.data.nombre
     this.user.asistio = this.data.asistio
+    this.user.ficha = this.data.ficha
     this.user.competencia = this.data.competencia
     console.log(this.data)
     

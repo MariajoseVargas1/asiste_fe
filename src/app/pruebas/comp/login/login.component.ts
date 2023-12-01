@@ -26,9 +26,9 @@ export class LoginComponent {
         console.log('Autenticación exitosa');
         console.log(response);
         if (response.user_type==="INSTRUCTOR") {
-          this.router.navigate(["/instructor"])
+          this.router.navigate(["/gridi"])
         } else if(response.user_type==="APRENDIZ"){
-          this.router.navigate(["/aprendiz"])
+          this.router.navigate(["/inicio"])
         }else{
           this.router.navigate(["/admin"])
         }
