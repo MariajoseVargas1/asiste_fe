@@ -1,48 +1,48 @@
 <div class="container-grid">
   
-<div class="my-5">
-  <div class="mx-auto w-25 " style="max-width:100%;">
-      <h2 class="text-center mb-3">Añadir asistencia</h2>
-      <form [formGroup]="form" (ngSubmit)="addUser()">
-        <!--Nombre-->
-        <div class="row">
-          <div class="col-md-12 form-group mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input id="nombre"  formControlName="nombre" type="text" name="nombre" class="form-control" placeholder="Nombre" required>
-          </div>
-        </div>
-
-        <!--Asistio/No asistio-->
-        <div class="row">
+  <div class="my-5">
+    <div class="mx-auto w-25 " style="max-width:100%;">
+        <h2 class="text-center mb-3">Añadir asistencia</h2>
+        <form [formGroup]="form" (ngSubmit)="addUser()">
+          <!--Nombre-->
+          <div class="row">
             <div class="col-md-12 form-group mb-3">
-              <label for="asistio" class="form-label">Asistio/No asistio</label>
-              <input id="asistio" type="text"  formControlName="asistio" name="asistio" class="form-control" placeholder="Asistio/No asistio" required>
+              <label for="nombre" class="form-label">Nombre</label>
+              <input id="nombre"  formControlName="nombre" type="text" name="nombre" class="form-control" placeholder="Nombre" required>
             </div>
           </div>
-
-       <!--Asistio/No asistio-->
-        <div class="row">
-          <div class="col-md-12 form-group mb-3">
-            <label for="ficha" class="form-label">Ficha</label>
-            <input id="ficha" type="text"  formControlName="ficha" name="ficha" class="form-control" placeholder="Ficha" required>
-          </div>
-        </div>
-
-        <!--Competencia-->
-        <div class="row">
+  
+          <!--Asistio/No asistio-->
+          <div class="row">
+              <div class="col-md-12 form-group mb-3">
+                <label for="asistio" class="form-label">Asistio/No asistio</label>
+                <input id="asistio" type="text"  formControlName="asistio" name="asistio" class="form-control" placeholder="Asistio/No asistio" required>
+              </div>
+            </div>
+  
+         <!--Asistio/No asistio-->
+          <div class="row">
             <div class="col-md-12 form-group mb-3">
-              <label for="competencia" class="form-label">Resultado de aprendizaje</label>
-              <input id="competencia" type="text"  formControlName="competencia" name="competencia" class="form-control" placeholder="Resultado de aprendizaje" required>
+              <label for="ficha" class="form-label">Ficha</label>
+              <input id="ficha" type="text"  formControlName="ficha" name="ficha" class="form-control" placeholder="Ficha" required>
             </div>
           </div>
-        <div class="row">
-          <div class="col-md-12 form-group">
-            <input [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Añadir">
+  
+          <!--Competencia-->
+          <div class="row">
+              <div class="col-md-12 form-group mb-3">
+                <label for="competencia" class="form-label">Resultado de aprendizaje</label>
+                <input id="competencia" type="text"  formControlName="competencia" name="competencia" class="form-control" placeholder="Resultado de aprendizaje" required>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <input [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Añadir">
+            </div>
           </div>
-        </div>
-        <div>   
-        </div>
-      </form>
+          <div>   
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-</div>

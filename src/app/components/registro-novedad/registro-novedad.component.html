@@ -1,125 +1,46 @@
 <div class="d-flex adjunto">
-<h4 class="titulo"> Registro de novedad</h4>
+  <h4 class="titulo">Registro de novedad</h4>
 </div>
 <div class="d-flex justify-content-center align-items-center vh-100">
   <div class="card-grande">
-  <div class="card p-4">
-    <form class="registro-novedades">
-      <div *ngIf="parte1Visible">
-        <!-- Primera vista-->
+    <div class="card p-4">
+      <form class="registro-novedades">
         <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input
-            type="text"
-            class="form-control"
-            id="nombre"
-            placeholder="Ingrese su nombre"
-            required
-          />
-        </div>
-
-        <div class="mb-3">
-          <label for="apellidos" class="form-label">Apellidos</label>
-          <input
-            type="text"
-            class="form-control"
-            id="apellidos"
-            placeholder="Ingrese sus apellidos"
-            required
-          />
-        </div>
-
-            <div class="mb-3">
-              <label for="descripcion" class="form-label">Descripción de la novedad</label>
-              <textarea class="form-control" id="comentarios" rows="4" placeholder="Ingrese una breve descripción de su novedad aquí" required></textarea>
-            </div>
-
-        <div class="mb-3">
-          <label for="ficha" class="form-label">Ficha</label>
+          <label for="documento" class="form-label"
+            >Documento de identidad</label
+          >
           <input
             type="number"
             class="form-control"
-            id="ficha"
-            placeholder="Ingrese su número de ficha"
+            required
+            id="documento"
+            placeholder="Ingrese su documento"
+            pattern="[0-9]{12}"
+            autofocus
+            
           />
         </div>
 
         <div class="mb-3">
-          <label for="programa">Programa de formación</label>
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Seleccione su programa de formación</option>
-            <option value="1">ADSO</option>
-            <option value="2">ADSI</option>
-            <option value="3">DVEI</option>
-          </select>
-        </div>
-
-        <button class="btn btn-primary" (click)="mostrarParte2()">
-          Siguiente
-        </button>
-      </div>
-
-      <div *ngIf="!parte1Visible && parte2Visible">
-
-        <!-- Segunda vista -->
-
-        <div class="mb-3">
-          <label for="jornada">Jornada</label>
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Seleccione su jornada</option>
-            <option value="1">Diurna</option>
-            <option value="2">Tarde</option>
-            <option value="3">Nocturna</option>
-          </select>
-        </div>
-        
-        <div class="mb-3">
-          <label for="nivel-formacion">Nivel de formación</label>
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Seleccione su nivel de formación</option>
-            <option value="1">Técnico</option>
-            <option value="2">Tecnólogo</option>
-            <option value="3">Auxiliar</option>
-          </select>
-        </div>
-        
-        <div class="mb-3">
-          <label for="celular" class="form-label">Teléfono/Celular</label>
-          <input
-            type="tel"
+          <label for="descripcion" class="form-label"
+            >Descripción de la novedad</label
+          >
+          <textarea
             class="form-control"
-            id="celular"
-            placeholder="123-456-7890"
-          />
-        </div>
-
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            placeholder="micorreo@dominio.com"
-          />
-        </div>
-
-        <div class="mb-3">
-          <label for="email-i" class="form-label">Correo instructor líder</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email-i"
-            placeholder="instructorcorreo@dominio.com"
-          />
+            id="comentarios"
+            rows="4"
+            required
+            placeholder="Ingrese una breve descripción de su novedad aquí"
+            
+          ></textarea>
         </div>
 
         <button class="btn btn-success" type="submit">Enviar</button>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
-</div>
-</div>
-<div class="fondo"></div>
+  <div class="fondo"></div>
 
-<!-- <textarea class="form-control" id="comentarios" rows="4" placeholder="Ingrese sus comentarios aquí" required></textarea>
+  <!-- <textarea class="form-control" id="comentarios" rows="4" placeholder="Ingrese sus comentarios aquí" required></textarea>
 FALTO EL TEXT AREA-->
+</div>

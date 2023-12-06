@@ -1,40 +1,42 @@
 <div class="container-grid">
-    <div class="my-5">
-        <div class="mx-auto w-25 " style="max-width:100%;">
-          <h2 class="text-center mb-3">Editar asistencia</h2>
-          <form  [formGroup]="form" (ngSubmit)="submit()" >
+  <div class="my-5">
+      <div class="mx-auto w-25 " style="max-width:100%;">
+        <h2 class="text-center mb-3">Editar asistencia</h2>
+        <form  [formGroup]="form" (ngSubmit)="submit()" >
 
-             <!--Nombre-->
-            <div class="row">
-                <div class="col-md-12 form-group mb-3">
-                  <label for="nombre" class="form-label">Nombre</label>
-                  <input id="nombre"  formControlName="nombre"  type="text" name="nombre" class="form-control" [placeholder]="user?.nombre"  required>
-                </div>
+           <!--Nombre-->
+          <div class="row">
+              <div class="col-md-12 form-group mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input id="nombre"  formControlName="nombre"  type="text" name="nombre" class="form-control" [placeholder]="user?.nombre"  required>
               </div>
+            </div>
+          
+           <!--Asistio/No asistio-->
+           <div class="row">
+              <div class="col-md-12 form-group mb-3">
+                <label for="asistio" class="form-label">Asistio/No asistio</label>
+                <input id="asistio" type="text"  formControlName="asistio" name="asistio" class="form-control" [placeholder]="user?.asistio"  required>
+              </div>
+            </div>
+
+         
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <button [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Editar">Editar</button>
+            </div>
+          </div>
+
+          <div>
             
-             <!--Asistio/No asistio-->
-             <div class="row">
-                <div class="col-md-12 form-group mb-3">
-                  <label for="asistio" class="form-label">Asistio/No asistio</label>
-                  <input id="asistio" type="text"  formControlName="asistio" name="asistio" class="form-control" [placeholder]="user?.asistio"  required>
-                </div>
-              </div>
+          </div>
+        </form>
   
-           
-            <div class="row">
-              <div class="col-md-12 form-group">
-                <button [disabled]="!form.valid" class="btn btn-primary w-100" type="submit" value="Editar">Editar</button>
-              </div>
-            </div>
-  
-            <div>
-              
-            </div>
-          </form>
-    
-        </div>
       </div>
     </div>
+  </div>
 
+
+   <!--Competencia == no se considero pertinente que se editara la competencia se puede prestar para favors-->
 
      <!--Competencia == no se considero pertinente que se editara la competencia se puede prestar para favors-->

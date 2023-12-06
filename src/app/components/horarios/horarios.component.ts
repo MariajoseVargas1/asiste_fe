@@ -43,7 +43,7 @@ export class HorariosComponent {
         startEditable: false,
         durationEditable: false,
         overlap: false,
-        description: 'Lorena Medina "412"',
+        description: 'Instructor/a: Lorena Medina\nHorario: 6:10pm - 9:40pm\nAmbiente: 412\nSede: Calle 52',
         id: 'Clase-lunes',
         constraint: 'businessHours', // Esto asegura que el evento se presenta en horas laborales
         ranges: [
@@ -64,7 +64,7 @@ export class HorariosComponent {
         startEditable: false,
         durationEditable: false,
         overlap: false,
-        description: 'Erick Granados "509"',
+        description: 'Instructor/a: Erick Granados\nHorario: 6:10pm - 9:40pm\nAmbiente: 509\nSede: Calle 52',
         id: 'Clase-martes',
         constraint: 'businessHours', // Esto asegura que el evento se presenta en horas laborales
         ranges: [
@@ -84,7 +84,7 @@ export class HorariosComponent {
         startEditable: false,
         durationEditable: false,
         overlap: false,
-        description: 'Erick Granados "509"',
+        description: 'Instructor/a: Erick Granados\nHorario: 6:10pm - 9:40pm\nAmbiente: 509\nSede: Calle 52',
         id: 'Clase-miercoles',
         constraint: 'businessHours', // Esto asegura que el evento se presenta en horas laborales
         ranges: [
@@ -104,7 +104,7 @@ export class HorariosComponent {
         startEditable: false,
         durationEditable: false,
         overlap: false,
-        description: 'Paola Ballen "509"',
+        description: 'Instructor/a: Paola Ballen\nHorario: 6:10pm - 9:40pm\nAmbiente: 509\nSede: Calle 52',
         id: 'Clase-jueves',
         constraint: 'businessHours', // Esto asegura que el evento se presenta en horas laborales
         ranges: [
@@ -124,7 +124,7 @@ export class HorariosComponent {
         startEditable: false,
         durationEditable: false,
         overlap: false,
-        description: 'Paola Ballen "509"',
+        description: 'Instructor/a: Paola Ballen\nHorario: 6:10pm - 9:40pm\nAmbiente: 509\nSede: Calle 52',
         id: 'Clase-viernes',
         constraint: 'businessHours', // Esto asegura que el evento se presenta en horas laborales
         ranges: [
@@ -144,7 +144,7 @@ export class HorariosComponent {
         startEditable: false,
         durationEditable: false,
         overlap: false,
-        description: 'Andrea Ramos "408"',
+        description: 'Instructor/a: Andrea Ramos\nHorario: 7:00am - 10:00am\nAmbiente: 408\nSede: Calle 52',
         id: 'Clase-sabado1',
         constraint: 'businessHours', // Esto asegura que el evento se presenta en horas laborales
         ranges: [
@@ -164,7 +164,7 @@ export class HorariosComponent {
         startEditable: false,
         durationEditable: false,
         overlap: false,
-        description: 'Omar Rueda "210"',
+        description: 'Instructor/a: Omar Rueda\nHorario: 2:20pm - 4:00pm\nAmbiente: 210\nSede: Calle 52',
         id: 'Clase-sabado2',
         constraint: 'businessHours', // Esto asegura que el evento se presenta en horas laborales
         ranges: [

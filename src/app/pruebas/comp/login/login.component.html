@@ -16,17 +16,19 @@
             Ingreso de usuarios registrados
           </h5>
 
-          <form [formGroup]="form">
+          <form [formGroup]="form"><!--form [formGroup]="form"-->
             <div class="form-floating">
               <input
                 formControlName="document"
                 type="number"
                 class="form-control"
                 id="floatingInput"
-                placeholder=""
+                placeholder="Ingrese su número de documento"
+                
+                autofocus
               />
               <label for="floatingInput"
-                ><i class="bi bi-file-person"></i>Número de documento</label
+                ><i class="bi bi-file-person"></i> Número de documento</label
               >
             </div>
             <br /><!--CAMBIAR-->
@@ -36,16 +38,18 @@
                 type="password"
                 class="form-control"
                 id="contrasena"
-                placeholder=""
-              />
+                placeholder="Ingrese su contraseña"
+               
+              /><!--mirar pattern para la contraseña-->
               <br /><!--mirar lo del pattern-->
-              <a routerLink="/forgot">¿Olvidó su contraseña?</a>
+              <!-- <a routerLink="/forgot">¿Olvidó su contraseña?</a> -->
               <label for="floatingPassword" type="password"
-                ><i class="bi bi-shield-lock-fill"></i>Contraseña</label
+                ><i class="bi bi-shield-lock-fill"></i> Contraseña</label
               >
             </div>
             <button
               type="submit"
+              style="cursor: pointer;"
               class="btn btn-primary rounded"
               (click)="onClick()"
               [disabled]="!form.valid"

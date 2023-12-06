@@ -9,8 +9,7 @@ import { Router } from '@angular/router';
   selector: 'app-login',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  templateUrl: './login.component.html'
 })
 export class LoginComponent {
   constructor(private fb: FormBuilder, private auth: LoginService,private router:Router) {}

@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'instructor', component: HeaderComponent },
   { path: 'aprendiz', component: HeaderComponent },
   { path: 'admin', component: DataCoordinacionComponent},
-  { path: 'gridi', component: GridInstructorComponent},
+  { path: 'listado', component: GridInstructorComponent},
   { path: 'edit-asistencia', component: EditAsistenciaComponent},
   { path: 'add-asistencia', component: AddAsistenciaComponent},
   // { path: '**', component: NoEncontradoComponent},
